@@ -1,12 +1,13 @@
-import profilePic from "../Pictures/Profile_pic.jpg";
+import profilePic from "../../Pictures/Profile_pic.jpg";
 
 export const Home = () => {
   return (
     <div className="who-picture">
       <div className="who">
         <p>
-          <span>
-            Hi, I'm <span>Kurtis</span>!
+          <span className="span-first">
+            Hi, I'm <span className="span-name">Kurtis</span>, a Front-end
+            Developer from Colorado!
           </span>
         </p>
         <p> I enjoy solving problems through programming. </p>

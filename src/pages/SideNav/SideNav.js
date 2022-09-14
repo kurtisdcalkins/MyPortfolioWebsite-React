@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { ContactLinks } from "../components/ContactLinks";
+import { ContactLinks } from "../../components/ContactLinks";
 
 export const SideNav = () => {
   return (

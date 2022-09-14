@@ -10,12 +10,12 @@ export const ContactLinks = () => {
           <FontAwesomeIcon icon={faEnvelope} />
         </a>
       </div>
-      <div class="contact-details">
+      <div className="contact-details">
         <a href="https://www.linkedin.com/in/kurtis-calkins/" target="_blank">
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </div>
-      <div class="contact-details">
+      <div className="contact-details">
         <a href="https://github.com/kurtisdcalkins" target="_blank">
           <FontAwesomeIcon icon={faGithub} />
         </a>

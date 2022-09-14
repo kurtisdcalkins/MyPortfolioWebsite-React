@@ -1,5 +1,5 @@
-import taskPic from "../Pictures/Task List_img.png";
-import tripPic from "../Pictures/Trip Logger_img.png";
+import taskPic from "../../Pictures/Task List_img.png";
+import tripPic from "../../Pictures/Trip Logger_img.png";
 
 export const Projects = () => {
   return (

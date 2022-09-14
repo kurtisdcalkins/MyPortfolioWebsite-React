@@ -7,7 +7,7 @@ a {
   --darkest: hsl(160, 67%, 12%);
   --dark: #FD4D0C;
   --mid: #448D76;
-  --light: hsl(160, 70%, 12%);
+  --light: hsl(15, 69%, 80%);
   --lightest: hsl(15, 69%, 90%);
   --lightest-opacity: hsl(15, 69%, 90%, .7);
   --pink: hsl(0, 100%, 65%);
@@ -142,7 +142,7 @@ code {
 }
 
 .contact-details:not(:last-child) {
-  margin-right: 22px;
+  margin-right: 20px;
 }
 
 /* --- Tab Links --- */
@@ -189,15 +189,12 @@ code {
 
 
 
+
 /* --- Each Division --- */
 .division {
   margin-left: 10rem;
-  /* margin-right: 3rem; */
-  /* background-color: inherit; */
-  /* background-color: var(--mid); */
   width: 92%;
   min-height: calc(100vh - var(--head-height));
-  padding-left: 5rem;
 }
 
 /* --- Home --- */
@@ -208,7 +205,8 @@ code {
   justify-content: right;
   width: 70%;
   text-align: left;
-  margin: 2rem 0 0 8rem;
+  margin: 9rem 0 0 8rem;
+  color: var(--mid);
 }
 
 .who {
@@ -223,11 +221,22 @@ code {
   transform: scale(1.01);
 }
 
+.span-first {
+  color: var(--lightest);
+  font-size: 3rem;
+}
+
+.span-name {
+  color: var(--dark);
+  font-weight: 700;
+  font-size: 3rem;
+}
+
 /* ---- Picture ---- */
 .picture {
   width: 100%;
   text-align: center;
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
 }
 
 .profile-pic {
@@ -235,32 +244,70 @@ code {
   object-fit: cover;
   object-position: right top;
   overflow: hidden;
-  width: 25rem;
+  width: 35rem;
   /* opacity: .8; */
-  max-height: 20rem;
+  max-height: 25rem;
 }
 
 
 /* ----- About Me Section ----- */
 #about-me {
-  /* margin: 0 10vw 0 3rem; */
-  width: 70%;
+  width: 88%;
+  height: 70vh;
   text-align: left;
   opacity: .9;
-  text-shadow: -1px -1px 1px;
+  margin-top: 6vh;
+  display: flex;
 }
 
-article>p {
-  text-shadow: 0 1px 1px;
-  font-size: 1.1rem;
-  letter-spacing: .1rem;
-  color: hsl(15, 69%, 85%);
-  line-height: 1.3rem;
+.where-how {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  /* margin-top: 6rem; */
+  height: 70vh;
 }
 
-article {
-  transition: 1s;
-  margin-bottom: 3rem;
+.article {
+  padding: .5rem 1rem;
+  background-color: var(--lightest);
+  color: var(--pink);
+  /* border: 1px solid black; */
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 1px 1px 10px;
+}
+
+.summary {
+  height: 70vh;
+  margin-right: 4rem;
+  /* margin-top: 8rem; */
+  /* background-color: var(--lightest); */
+  border-radius: 15px;
+}
+
+.my-pic {
+  height: 300px;
+  border-radius: 15px;
+}
+
+.summary-pic {
+  width: 35rem;
+  object-fit: cover;
+  object-position: right top;
+  overflow: hidden;
+}
+
+.summary-content {
+  display: flex;
+}
+
+
+.article-content {
+  width: 40rem;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  color: var(--lightest);
 }
 
 article:hover {
@@ -273,9 +320,16 @@ article:hover {
 /* ----- Skills ----- */
 /* --- Programming Skills --- */
 #skills {
-  width: 50%;
-  margin-left: 1rem;
+  width: 90%;
+  margin-left: 10rem;
   /* padding-right: 10rem; */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.skills-list {
+  width: 60%;
+  /* margin-left: -1rem; */
 }
 
 .programming-skill {
@@ -299,6 +353,14 @@ article:hover {
 .each-skill:hover {
   transform: scale(1.02);
   box-shadow: 5px 5px 10px black;
+  cursor: pointer;
+}
+
+.each-skill.active {
+  transform: scale(1.02);
+  box-shadow: 5px 5px 10px black;
+  background-color: var(--darkest);
+  color: var(--lightest);
 }
 
 .skill-icon {
@@ -313,7 +375,134 @@ article:hover {
 }
 
 
+/* --- Skills Aside --- */
+.choose-aside {
+  width: 500px;
+  position: relative;
+  /* margin-left: 2rem; */
+  background-color: var(--darkest);
+  height: 75vh;
+  margin-top: 4.5rem;
+  margin-left: 4rem;
+  border-radius: 15px;
+  color: var(--lightest);
+  box-shadow: 5px 5px 10px black;
+}
 
+.skills-aside {
+  width: 500px;
+  position: relative;
+  /* margin-left: 2rem; */
+  background-color: var(--darkest);
+  height: 35vh;
+  margin-top: 4.5rem;
+  margin-left: 4rem;
+  padding: 1rem;
+  border-radius: 15px;
+  color: var(--lightest);
+  box-shadow: 5px 5px 10px black;
+}
+
+.skills-aside::before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 7.5rem;
+  width: 0;
+  height: 0;
+  border-top: 35px solid transparent;
+  border-right: 75px solid var(--darkest);
+  border-bottom: 35px solid transparent;
+}
+
+.prof-skill-label {
+  position: relative;
+  left: -4.4rem;
+  top: -.3rem;
+  font-size: 1.8rem;
+  color: var(--dark);
+}
+
+.prof-aside-content {
+  padding: 0 1rem 1rem 0;
+  margin-left: -2rem;
+  margin-top: -1rem;
+}
+
+.prof-aside-content h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.prof-aside-content h3 {
+  text-align: left;
+  text-shadow: none;
+}
+
+.skills-aside-prof {
+  display: flex;
+  justify-content: left;
+  width: 500px;
+  position: relative;
+  /* margin-left: 2rem; */
+  background-color: var(--darkest);
+  height: max-content;
+  margin-top: 24rem;
+  margin-left: 4rem;
+  padding: 1rem;
+  border-radius: 15px;
+  color: var(--lightest);
+  box-shadow: 5px 5px 10px black;
+  text-align: left;
+}
+
+.skills-aside-prof::before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 1rem;
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent;
+  border-right: 80px solid var(--darkest);
+  border-bottom: 40px solid transparent;
+}
+
+.skills-aside-prof a {
+  color: var(--dark);
+  text-decoration: underline;
+}
+
+.skills-aside-prof a:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.aside-detail {
+  height: 20vh;
+  text-align: center;
+}
+
+.cert-link {
+  color: var(--dark);
+  margin-left: 1rem;
+  text-decoration: underline;
+}
+
+.cert-link:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.project-list-name {
+  list-style-type: none;
+  text-align: left;
+}
+
+.project-list-name:hover {
+  cursor: pointer;
+  opacity: .8;
+}
 
 
 /* ----- Professional Skills ----- */
@@ -342,9 +531,15 @@ article:hover {
   transition: 0.5s;
 }
 
-.prof-skill:hover {
-  transform: scale(1.02);
-  box-shadow: 5px 5px 10px black;
+.prof-skill li:hover {
+  color: var(--darkish);
+  cursor: pointer;
+}
+
+.active-skill.active {
+  color: var(--darkish);
+  /* background-color: var(--light); */
+  font-weight: 700;
 }
 
 h3 {
@@ -354,7 +549,7 @@ h3 {
   text-shadow: -1px -1px 1px;
 }
 
-li {
+.prof-skill li {
   list-style-type: square;
   margin-left: 1.5rem;
   font-size: 1.2rem;
